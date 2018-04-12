@@ -19,7 +19,7 @@ public class ConexaoSingleton {
 		 	Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/agenda_academica",
 					"root", "root");
-			System.out.println("Banco Conectado com sucesso! \o/");
+			System.out.println("Banco Conectado com sucesso!");
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 			System.out.println("Erro na conexão!");
