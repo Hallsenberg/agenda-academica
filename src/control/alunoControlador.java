@@ -46,29 +46,44 @@ public class alunoControlador extends HttpServlet {
 		String action = request.getParameter("action");
 		
 		if(action.equalsIgnoreCase("cadastro")){
-		Aluno aluno = new Aluno();
+			Aluno aluno = new Aluno();
 		
-		String nome = request.getParameter("nome");
-		aluno.setNome(nome);
-		
-		String email = request.getParameter("email");
-		aluno.setEmail(email);
-		
-		String matricula = request.getParameter("matricula");
-		aluno.setMatricula(matricula);
-		
-		String senha= request.getParameter("senha");
-		aluno.setSenha(senha);
-		
-		String idaluno = request.getParameter("idaluno");
-		
-		if(dao.adicionar(aluno))
-	    {            
-	            //redirecinando para página de login, caso o cadastro tenha tido sucesso:
-	            response.sendRedirect("login.jsp");
-	    }
-		 else
-		        response.sendRedirect("erro-cadastro.jsp");	 
+			String nome = request.getParameter("nome");
+			aluno.setNome(nome);
+			
+			String email = request.getParameter("email");
+			aluno.setEmail(email);
+			
+			String matricula = request.getParameter("matricula");
+			aluno.setMatricula(matricula);
+			
+			String senha= request.getParameter("senha");
+			aluno.setSenha(senha);
+			
+			String idaluno = request.getParameter("idaluno");
+			
+			if(dao.adicionar(aluno))
+		            //redirecinando para página de login, caso o cadastro tenha tido sucesso:
+		            response.sendRedirect("login.jsp");
+		     else
+			        response.sendRedirect("erro-cadastro.jsp");	 
+		}			
+		else if(action.equalsIgnoreCase("login")){
+			
+        	String  matricula =(request.getParameter("matricula"));
+        	String  senha =(request.getParameter("senha"));
+        	Aluno aluno = dao.obterLogin(matricula,senha);
+            request.setAttribute("aluno", aluno);
+            
+       	 	if(aluno.getMatricula() == null || aluno.getMatricula().isEmpty() || aluno.getSenha() == null || aluno.getSenha().isEmpty()){  
+       	 		RequestDispatcher view = request.getRequestDispatcher("erro-login.jsp");       
+		        view.forward(request, response); 	 
+    	    } else {
+	            RequestDispatcher view = request.getRequestDispatcher("index.html");		           
+		        view.forward(request, response);
+
+    	    }
+			
 		}
 	
 	}
