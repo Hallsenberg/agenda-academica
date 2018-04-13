@@ -15,25 +15,25 @@
     </head>
     <body>
         <div id="loginbox">
-            <form id="loginform" class="form-vertical" action="index.html">
+            <form id="loginform" class="form-vertical" method="post" action="alunoControlador?action=login">
 				 <div class="control-group normal_text"> <h3><img src="img/logo.png" alt="Logo" /></h3></div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_lg"><i class="icon-info-sign"> </i></span><input type="text" placeholder="Matrícula" />
+                            <span class="add-on bg_lg"><i class="icon-info-sign"> </i></span><input type="text" placeholder="Matrícula" name="matricula" required/>
                         </div>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_ly"><i class="icon-lock"></i></span><input type="password" placeholder="Senha" />
+                            <span class="add-on bg_ly"><i class="icon-lock"></i></span><input type="password" placeholder="Senha" name="senha" required/>
                         </div>
                     </div>
                 </div>
                 <div class="form-actions">
                     <span class="pull-left"><a href="cadastro.jsp" class="flip-link btn btn-info">Criar uma conta</a></span>
-                    <span class="pull-right"><a type="submit" href="index.html" class="btn btn-success" />Login</a></span>
+                   	<button type="submit" class="btn btn-success">Login</button>
                 </div>
             </form>
         </div>
