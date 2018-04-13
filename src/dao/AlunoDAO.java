@@ -11,7 +11,7 @@ import model.Aluno;
 
 public class AlunoDAO {
 	
-	//a conexão com o banco de dados
+			//a conexão com o banco de dados
 			private Connection con;
 
 			public AlunoDAO() {
@@ -49,6 +49,32 @@ public class AlunoDAO {
 				return retorno;
 			}
 
+			public Aluno obterLogin(String matricula, String senha) {
+				Aluno aluno = new Aluno();
+				
+				String sql = "select * from aluno where matricula = ? and senha = ?";
+				
+				try {
+					// prepared statement para inserção
+					PreparedStatement stmt = con.prepareStatement(sql);
+					stmt.setString(1, matricula);
+					stmt.setString(2, senha);
+					
+					ResultSet rs = stmt.executeQuery();
+					
+					if(rs.next()){
+						aluno.setIdaluno(rs.getInt("idAluno"));
+						aluno.setNome(rs.getString("nome"));
+						aluno.setEmail(rs.getString("email"));
+						aluno.setMatricula(rs.getString("matricula"));
+						aluno.setSenha(rs.getString("senha"));						
+					}
+				}catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
+				
+				return aluno;
+			}
 /**
 			public boolean alterar(Aluno aluno) {
 				boolean retorno = false;
