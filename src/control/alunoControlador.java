@@ -1,6 +1,8 @@
 package control;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,16 +35,17 @@ public class alunoControlador extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at111: ").append(request.getContextPath());
+		String action = request.getParameter("action");
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//
+		String action = request.getParameter("action");
+		
+		if(action.equalsIgnoreCase("cadastro")){
 		Aluno aluno = new Aluno();
 		
 		String nome = request.getParameter("nome");
@@ -65,7 +68,8 @@ public class alunoControlador extends HttpServlet {
 	            response.sendRedirect("login.jsp");
 	    }
 		 else
-		        response.sendRedirect("erro-cadastro.jsp");
-			 
+		        response.sendRedirect("erro-cadastro.jsp");	 
+		}
+	
 	}
 }

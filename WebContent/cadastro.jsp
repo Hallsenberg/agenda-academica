@@ -17,7 +17,7 @@
     <body>
         <div id="loginbox">
           <div class="control-group normal_text"> <h3><img src="img/logo.png" alt="Logo" /></h3></div>
-          <form name="frm" action="alunoControlador" method="post">
+          <form name="frm" method="post" action="alunoControlador?action=cadastro">
             <div class="control-group">
               <div class="controls">
               	<input type=hidden name="idaluno" value="${aluno.idaluno}">
