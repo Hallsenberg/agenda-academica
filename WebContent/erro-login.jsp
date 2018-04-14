@@ -28,13 +28,22 @@
 			<br>
 			<br>
 			<br>
-              <h1>666</h1>
-              <h3>Opps, You're lost.</h3>
-              <p>We can not find the page you're looking for.</p>
-              <a class="btn btn-warning btn-big"  href="login.jsp">Back to Home</a>
+              <h1>Hum...</h1>
+              <h2>Parece que você não está cadastrado.</h2>
+              <p>Verificamos em nosso banco e não encontramos seus dados, você está realmente cadastrado? Se estiver verifique seus dados na tela de Login e tente novamente.</p>
+              <br>
+              <a class="btn btn-warning btn-big"  href="login.jsp">Voltar para a página de Login</a>
+			 <a class="btn btn-warning btn-big"  href="cadastro.jsp">Quero me cadastrar</a>
 			</div>			  
+						  
     </div>
 	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 <!--Footer-part-->
 <div class="row-fluid">

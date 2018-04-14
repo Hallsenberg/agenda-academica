@@ -28,13 +28,21 @@
 			<br>
 			<br>
 			<br>
-              <h1>404</h1>
-              <h3>Opps, You're lost.</h3>
-              <p>We can not find the page you're looking for.</p>
-              <a class="btn btn-warning btn-big"  href="cadastro.jsp">Back to Home</a>
+              <h1>Ôpa!</h1> 
+               <br>
+              <h3>Algo deu errado. Parece que os dados que você está cadastrando já existem. </h3>
+              <p>Verifique os seus dados e tente novamente.</p>
+              <br>
+              <a class="btn btn-warning btn-big"  href="cadastro.jsp">Voltar para página de cadastro</a>
 			</div>			  
     </div>
 	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
 
 <!--Footer-part-->
 <div class="row-fluid">
