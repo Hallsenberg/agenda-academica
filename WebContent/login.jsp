@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-actions">
                     <span class="pull-left"><a href="cadastro.jsp" class="flip-link btn btn-info">Criar uma conta</a></span>
-                   	<button type="submit" class="btn btn-success">Login</button>
+                   	<span class="pull-right"><button type="submit" class="btn btn-success">Login</button></span>
                 </div>
             </form>
         </div>
