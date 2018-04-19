@@ -32,7 +32,7 @@
               <h2>Parece que você não está cadastrado.</h2>
               <p>Verificamos em nosso banco e não encontramos seus dados, você está realmente cadastrado? Se estiver verifique seus dados na tela de Login e tente novamente.</p>
               <br>
-              <a class="btn btn-warning btn-big"  href="login.jsp">Voltar para a página de Login</a>
+              <a class="btn btn-primary"  href="login.jsp">Voltar para a página de Login</a>
 			 <a class="btn btn-warning btn-big"  href="cadastro.jsp">Quero me cadastrar</a>
 			</div>			  
 						  
