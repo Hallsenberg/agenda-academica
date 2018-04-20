@@ -14,6 +14,9 @@
 
     </head>
     <body>
+        <div class="row-fluid" align = "center">
+  			<div class="span12"> Quer saber mais sobre a Agenda Acadêmica? Visite nosso <a href="https://github.com/Hallsenberg/agenda-academica" target="_blank">repositório</a>.</div>
+		</div>
         <div id="loginbox">
             <form id="loginform" class="form-vertical" method="post" action="alunoControlador?action=login">
 				 <div class="control-group normal_text"> <h3><img src="img/logo.png" alt="Logo" /></h3></div>
@@ -37,6 +40,12 @@
                 </div>
             </form>
         </div>
+        
+        <!--Footer-part-->
+
+		<div class="row-fluid">
+  			<div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>
+		</div>
 
         <script src="js/jquery.min.js"></script>
         <script src="js/matrix.login.js"></script>
