@@ -1,5 +1,5 @@
-# O que é a aplicação? 
-     - O agenda acadêmica é uma aplicação responsável por auxiliar a organização do estudante.
+## O que é a aplicação? ##
+       O agenda acadêmica é uma aplicação responsável por auxiliar a organização do estudante.
 - **Objetivo**
      - O objetivo da aplicação é auxiliar o estudante a se organizar quanto as suas questões pessoais e
       escolares.
