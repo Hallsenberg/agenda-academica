@@ -41,7 +41,7 @@
               </div>
             </div>
             <div class="form-actions" >
-              <span><a href="login.jsp" class="flip-link btn btn-danger" id="to-login">Cancelar</a></span>
+              <span><a href="index.html" class="flip-link btn btn-danger" id="to-login">Cancelar</a></span>
               <button type="reset" class="btn btn-primary">Limpar campos</button>
               <button type="submit" class="btn btn-success">Cadastrar</button>
             </div>
